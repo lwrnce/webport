@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Poiret+One|Roboto");
+
+:root {
+    --Poiret-font: "Poiret One", cursive;
+    --azur: linear-gradient(to right, #44d3c9, #3d70cf, #3636b9);
+    --smboxgradient: linear-gradient(45deg, #6096fd, #aab6fb, #fb7bbe, #faa7bb);
+}
+
+
+.smbox {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-flex;
+    padding: 10px 0px 0px 18px;
+    background: var(--smboxgradient);
+    border-radius: 40px;
+    overflow-x: hidden;
+    cursor: pointer;
+}
+
+.smbox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    height: 200px;
+    width: 190px;
+    background: var(--azur);
+    transition: transform 700ms ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.smbox:hover::before,
+.smbox:focus::before {
+    transform: scaleX(2);
+}
+
+.smbox {
+    z-index: 1;
+    overflow: hidden;
+}
+
+.social {
+    font-family: var(--Poiret-font);
+    font-size: 30px;
+    padding: 0 15px 0 0;
+    color: var(--light-black);
+}
+
+.sm {
+    display: none;
+    list-style-type: none;
+    padding: 0px 0 5px 12px;
+    margin: 0px 25px 0px -25px;
+}
+
+.smbox:hover .social {
+    transition: color 350ms ease-in-out;
+    color: whitesmoke;
+}
+
+.smbox:hover .sm {
+    display: inline-flex;
+    position: relative;
+    font-size: 20px;
+}
+
+.smlink {
+    margin-left: 15px;
+}
+
+.fa-facebook:hover {
+    background: linear-gradient(45deg, #fbeee6, #ffe5d8, #ffcad4, #f3abb6);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.fa-github:hover {
+    background: linear-gradient(45deg, #6096fd, #aab6fb, #fb7bbe, #faa7bb);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.fa-instagram:hover {
+    background: linear-gradient(45deg, #eca960, #e68f6f, #da566a, #ca5081, #c01f8d);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.fa-linkedin:hover {
+    background: linear-gradient(45deg, #56c596, #7be495, #cff4d2);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/** Hover pulse grow */
+@-webkit-keyframes hvr-pulse-grow {
+    to {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+}
+
+@keyframes hvr-pulse-grow {
+    to {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+}
+
+.hvr-pulse-grow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.hvr-pulse-grow:hover,
+.hvr-pulse-grow:focus,
+.hvr-pulse-grow:active {
+    -webkit-animation-name: hvr-pulse-grow;
+    animation-name: hvr-pulse-grow;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
