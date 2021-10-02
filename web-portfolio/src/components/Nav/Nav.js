@@ -1,8 +1,9 @@
+import './Nav.css';
 
 function Nav() {
   return (
-      <div class="topnav">
-          <a class="active" href="#home">Home</a>
+      <div className="nav">
+          <a className="active" href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
           <a href="#experience">Experience</a>
