@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css?family=Poiret+One|Roboto");
+
+/* Variables */
+:root {
+    --font-family1: "Poiret One", cursive;
+    --font-family2: "Roboto", cursive;
+    --normal-font: 400;
+    --bold-font: 700;
+    --bolder-font: 900;
+    --light-black: #2e2c2caf;
+    --bggradient: linear-gradient(45DEG, #ffcce7, #81b7d2, #4d5198);
+    --light-gray: rgba(255, 255, 255, 0.877);
+    --goldgradient: linear-gradient(to right,
+        #462523 0,
+        #cb9b51 22%,
+        #f6e27a 45%,
+        #f6f2c0 50%,
+        #f6e27a 55%,
+        #cb9b51 78%,
+        #462523 100%);
+    --azur: linear-gradient(to right, #44d3c9, #3d70cf, #3636b9);
+    --smboxgradient: linear-gradient(45deg, #6096fd, #aab6fb, #fb7bbe, #faa7bb);
+    --white: #f5f5f5;
+    --transition: 0.3s
+}
+/* Variables end */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* CSS Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    font-family: var(--font-family1);
+    font-size: 1.25em;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--light-black);
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+/* CSS Resets end */
+
+/* Navbar */
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3.5rem;
+    background: var(--bggradient);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+
+nav h3 {
+    display: flex;
+    padding-top: 1rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.9rem;
+}
+
+nav ul li {
+    font-weight: var(--bold-font);
+}
+  
+.burger-menu {
+    color: var(--white);
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+/* Navbar ends*/

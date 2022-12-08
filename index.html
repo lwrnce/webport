@@ -7,25 +7,31 @@
         <title>Lawrence Yuen</title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
             integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        <link rel="stylesheet" href="./css/styles.css" />
+        <link rel="stylesheet" href="./assets/css/styles.css" />
     </head>
 
     <body>
         <header>
+            
             <!-- Navbar-->
             <nav>
                 <a href="#">
-                    <i class="icon">
-                        <img src="./assets/images/yuen.png" alt="Yuen" height=35px>
-                    </i>
-                    LAWRENCE YUEN
+                    <h3>
+                        <i class="icon">
+                            <img src="./assets/images/yuen.png" alt="Yuen" height=35px>
+                        </i>
+                        LAWRENCE YUEN
+                    </h3>
                 </a>
                 <ul class="navigation">
-                    <li>About</li>
-                    <li>Projects</li>
-                    <li>Experience</li>
-                    <li>Contact</li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
+                <button class="burger-menu" id="burger-menu">
+                    <ion-icon class="bars" name="menu-outline"></ion-icon>
+                </button>
             </nav>
         </header>
 
@@ -41,6 +47,10 @@
                 <a href="https://github.com/lwrnce" target="_blank">Lawrence Yuen</a>
             </p>
         </footer>
+        <!-- Website scripts-->
         <script src="assets/js/app.js"></script>
+        <!-- Ionicon scripts-->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
 </html>
