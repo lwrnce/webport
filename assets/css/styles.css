@@ -21,7 +21,12 @@
     --azur: linear-gradient(to right, #44d3c9, #3d70cf, #3636b9);
     --smboxgradient: linear-gradient(45deg, #6096fd, #aab6fb, #fb7bbe, #faa7bb);
     --white: #f5f5f5;
-    --transition: 0.3s
+    --transition: 0.3s;
+    --primary-shadow: #8b8eaf;
+    --secondary-shadow: #a17a69;
+    --bottom-margin: 0.5rem;
+    --bottom-margin-2: 1rem;
+    --line-height: 1.7rem;
 }
 /* Variables end */
 
@@ -86,6 +91,10 @@ nav ul {
 
 nav ul li {
     font-weight: var(--bold-font);
+}
+
+nav img {
+   max-width: 36px; 
 }
   
 .burger-menu {
