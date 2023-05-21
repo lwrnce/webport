@@ -137,92 +137,41 @@ nav img {
     padding: 0.3rem 0;
   }
 
-/* Carousel start */
+/* Horizontal Scrolling Wrapper start */
 
-.slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
-
-.containers {
-    display: none;
-}
-
-.previous, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 48%;
-    width: auto;
-    margin-top: -23px;
-    padding: 17px;
-    color: grey;
-    font-weight: bold;
-    font-size: 19px;
-    transition: 0.4s ease;
-    border-radius: 0 5px 5px 0;
-    user-select: none;
-}
-
-.next {
-    right: 0;
-    border-radius: 4px 0 0 4px;
-}
-
-.previous:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Slide Number*/
-
-.slideInfo {
-    color: white;
-    font-size: 18px;
-    padding: 10px 14px;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;   
-}
-
-/* Caption */
-
-.info {
-    color: white;
-    font-size: 14 px;
-    padding: 10px 14px;
-    position: absolute;
-    top: 0;
-}
-
-/* Circle indicators */
-.dots {
-    cursor: pointer;
-    height: 16px;
-    width: 16px;
-    margin: 0 3px;
-    background-color: var(--azur);
+  
+.scrolling-wrapper .card {
     display: inline-block;
-    transition: background-color 0.5s ease;
 }
 
-.enable, .dots:hover {
-    background-color: #717161;
+.scrolling-wrapper-flexbox {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+  
+.scrolling-wrapper-flexbox .card {
+    flex: 0 0 auto;
+    margin-right: 3px;
 }
 
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.3s;
-    animation-name: fade;
-    animation-duration: 1.3s;
+.card {
+    border: 2px solid ;
+    width: 33%;
+    height: 350px;
+    background: var(--azur);
 }
+  
+  .scrolling-wrapper, .scrolling-wrapper-flexbox {
+    height: 80px;
+    margin-bottom: 20px;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
 
-@-webkit-keyframes fade {
-    from {opacity: .5}
-    to {opacity: 2}
-}
 
-@keyframes fade {
-    from {opacity: .5}
-    to {opacity: 2}
-}
