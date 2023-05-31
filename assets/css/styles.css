@@ -161,17 +161,30 @@ nav img {
 }
 
 .card {
+    text-align: center;
     border: 2px solid ;
     width: 33%;
     height: 350px;
-    background: var(--azur);
+    background: var(--smboxgradient);
+}
+
+.card h2 {
+    margin-top: 20px;
 }
   
-  .scrolling-wrapper, .scrolling-wrapper-flexbox {
-    height: 80px;
-    margin-bottom: 20px;
+.scrolling-wrapper, .scrolling-wrapper-flexbox {
+    height: 33%;
+    margin-bottom: 100px;
     width: 100%;
     -webkit-overflow-scrolling: touch;
-  }
 
+}
 
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="card"] {
+      width: 100%;
+    }
+}
+
+/* Horizontal Scrolling Wrapper end */
