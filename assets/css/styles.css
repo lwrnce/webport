@@ -139,7 +139,13 @@ nav img {
 
 /* Horizontal Scrolling Wrapper start */
 
+.projects .container {
+    background: var(--light-black);
+    padding: 2rem;
+}
+
 .scrolling-wrapper {
+    background:rgba(0, 0, 0, 0.1);
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
@@ -147,20 +153,6 @@ nav img {
   
 .scrolling-wrapper .card {
     display: inline-block;
-}
-
-.scrolling-wrapper-flexbox {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-}
-  
-.scrolling-wrapper-flexbox .card {
-    flex: 0 0 auto;
-    margin-right: 3px;
-}
-
-.card {
     text-align: center;
     border: 2px solid ;
     width: 33%;
@@ -171,13 +163,9 @@ nav img {
 .card h2 {
     margin-top: 20px;
 }
-  
-.scrolling-wrapper, .scrolling-wrapper-flexbox {
-    height: 33%;
-    margin-bottom: 100px;
-    width: 100%;
-    -webkit-overflow-scrolling: touch;
 
+.scrolling-wrapper::-webkit-scrollbar {
+    display: none;
 }
 
 @media only screen and (max-width: 768px) {
